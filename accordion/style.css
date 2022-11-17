@@ -1,0 +1,56 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.acc-container {
+  width: 100%;
+  max-width: 500px;
+  margin: auto;
+  padding: 1rem;
+}
+
+.acc-wrap {
+  border: 1px solid black;
+  border-top: 0;
+}
+
+.acc-wrap:nth-child(1) {
+  border-top: 1px solid black;
+}
+
+.acc-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.acc-header.active + .acc-content {
+  _display: block;
+  padding: 0 0 1rem;
+  height: auto;
+}
+
+.acc-header.active .icon {
+  transform: rotate(135deg);
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  transition: all 0.3s;
+}
+
+.acc-content {
+  margin: 0 1rem;
+  _display: none;
+  height: 0;
+  overflow: hidden;
+  transition: all 0.3s;
+}
+
+body {
+  height: 3000px;
+}
